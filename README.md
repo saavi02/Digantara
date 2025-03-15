@@ -46,6 +46,68 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
+
+## 📌 API Endpoints & Sample Requests
+
+### **1️⃣ Binary Search API**
+**Endpoint:** `POST /binary_search/`
+```json
+{
+    "arr": [1, 3, 5, 7, 9, 11],
+    "target": 5
+}
+```
+**Response:**
+```json
+{
+    "algorithm": "Binary Search",
+    "result": 2
+}
+```
+
+### **2️⃣ Quick Sort API**
+**Endpoint:** `POST /quick_sort/`
+```json
+{
+    "arr": [3, 1, 4, 1, 5, 9, 2, 6]
+}
+```
+**Response:**
+```json
+{
+    "algorithm": "Quick Sort",
+    "sorted_array": [1, 1, 2, 3, 4, 5, 6, 9]
+}
+```
+
+### **3️⃣ BFS Traversal API**
+**Endpoint:** `POST /bfs/`
+```json
+{
+    "graph": { "A": ["B", "C"], "B": ["A", "D", "E"], "C": ["A", "F"], "D": ["B"], "E": ["B", "F"], "F": ["C"] },
+    "start_node": "A"
+}
+```
+**Response:**
+```json
+{
+    "algorithm": "BFS",
+    "result": ["A", "B", "C", "D", "E", "F"]
+}
+```
+
+### **4️⃣ View API Logs**
+**Endpoint:** `GET /logs/`
+**Response:**
+```json
+{
+    "logs": [
+        {"algorithm": "Binary Search", "input": {"arr": [1, 3, 5], "target": 5}, "output": 2}
+    ]
+}
+```
+
+
 The API will start at `http://127.0.0.1:8000/`.
 
 ---
