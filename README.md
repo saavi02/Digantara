@@ -47,7 +47,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-## 📌 API Endpoints & Sample Requests
+##  API Endpoints & Sample Requests
 
 ### **1️⃣ Binary Search API**
 **Endpoint:** `POST /binary_search/`
